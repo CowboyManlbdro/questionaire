@@ -3,30 +3,6 @@ const questionnaires = document.querySelectorAll(".questionnaire__wrapper"),
     pacient = document.querySelector("#pacient"),
     modal = document.querySelector('.modal');
 
-const names = [
-    "Илья",
-    "Иван",
-    "Максим",
-    "Петр",
-    "Владимир",
-    "Станислав",
-    "Александр",
-    "Николай",
-    "Игорь",
-    "Владислав",
-];
-const lastnames = [
-    "Иванов",
-    "Серов",
-    "Быков",
-    "Коробов",
-    "Воронов",
-    "Белов",
-    "Круглов",
-    "Куликов",
-    "Рыжков",
-    "Жуков",
-];
 
 const symptoms_table = [
     'skin_itching',
@@ -109,9 +85,9 @@ for (let j = 0; j < 3; j++) {
     radioList[rand].checked = true;
 }
 
-let name_p = names[getRandomInt(10)];
-let lastname = lastnames[getRandomInt(10)];
-pacient.textContent = name_p + " " + lastname;
+let name_p = getRandomIntInclusive(100,300);
+let lastname = getRandomIntInclusive(100,300);
+pacient.textContent = name_p + "" + lastname;
 
 function questionnaireSubmit() {
     let begin_sum = 0;
